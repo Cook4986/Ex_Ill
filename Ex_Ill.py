@@ -54,12 +54,12 @@ for file in sorted(listFiles):
             cv2.imshow(fileName + 'marked areas', image)
             wordNo = wordNo+1
             
-#locate source code and execute "Simple-HTR"
+#locate source code and execute "Simple-HTR" in the terminal (https://github.com/githubharald/SimpleHTR)
             print("Transcription initiated on "+fileName+"_"+"word # " + str(wordNo))
             os.chdir(".../SimpleHTR-master/src")
             result = subprocess.run(['python', 'main.py'], stdout=subprocess.PIPE)
             
-#print system output to txt file
+#print system output of "Simple-HTR" to txt file
             temp = sys.stdout
             sys.stdout = open(textOut + fileName +'.txt', 'a')
             print(result.stdout)
