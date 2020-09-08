@@ -1,4 +1,4 @@
-#EX-ILL
+#EX-ILL HTR
 #Image pre-processing + Word Segmentation + TF-based transcription
 #Credits: Gabe Pizzorno, https://github.com/githubharald/SimpleHTR, and https://stackoverflow.com/questions/53962171/perform-line-segmentation-cropping-serially-with-opencv
 #To Add: SampleProcessor.py, deslant, WordBeam Search
@@ -46,7 +46,7 @@ for file in sorted(listFiles):
             # increase line width
             kernel = np.ones((1, 1), np.uint8)
             imgMorph = cv2.erode(img_bw, kernel, iterations = 1)
-           # img_inv = cv2.bitwise_not(img_bw)
+            #img_inv = cv2.bitwise_not(img_bw)
             
 #write words to disk            
             cv2.imwrite("xxxxx"/temp/word.png", imgMorph) 
