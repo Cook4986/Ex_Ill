@@ -1,7 +1,7 @@
 #EX-ILL
 #Image pre-processing + Word Segmentation + TF-based transcription
-#From: Gabe Pizzorno, https://github.com/githubharald/SimpleHTR, and https://stackoverflow.com/questions/53962171/perform-line-segmentation-cropping-serially-with-opencv
-#Add: SampleProcessor.py, deslant, WordBeam Search
+#Credits: Gabe Pizzorno, https://github.com/githubharald/SimpleHTR, and https://stackoverflow.com/questions/53962171/perform-line-segmentation-cropping-serially-with-opencv
+#To Add: SampleProcessor.py, deslant, WordBeam Search
 import cv2
 import numpy as np
 import os
@@ -10,8 +10,8 @@ import subprocess
 import re
 
 #declarations
-path='xxxx'
-textOut='xxxx'
+path='xxxxxxx' #target image directory
+textOut='xxxxxxx' #transcription output path
 listFiles=os.listdir(path)
 imgNo = 1
 wordNo = 0
@@ -22,7 +22,7 @@ for file in sorted(listFiles):
         imgNo=str(imgNo)
         image = cv2.imread(path+'/'+file)
         fileName=file.split('.')[0]
-        opPath=("xxxx")
+        opPath=("xxxxxx"+fileName+"/")
         if not os.path.exists(opPath):
             os.makedirs(opPath)
         
@@ -49,7 +49,7 @@ for file in sorted(listFiles):
            # img_inv = cv2.bitwise_not(img_bw)
             
 #write words to disk            
-            cv2.imwrite("xxxx", imgMorph) 
+            cv2.imwrite("xxxxx"/temp/word.png", imgMorph) 
             cv2.imwrite(opPath+fileName+"_"+str(wordNo)+'.png', imgMorph)   
             cv2.rectangle(image,(x,y),( x + w, y + h ),(90,0,255),2)
             cv2.imshow(fileName + 'marked areas', image)
@@ -57,7 +57,7 @@ for file in sorted(listFiles):
             
 #locate source code and execute "Simple-HTR" per word
             print("Transcription initiated on "+fileName+"_"+"word # " + str(wordNo))
-            os.chdir("xxxx")
+            os.chdir("xxxxxx")# Simple HTR program location
             result = subprocess.run(['python', 'main.py'], stdout=subprocess.PIPE)
             
 #print system output to txt file
