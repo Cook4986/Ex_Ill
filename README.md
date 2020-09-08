@@ -1,5 +1,5 @@
 # Ex_Ill HTR
-Proof-of-concept handwriting transcription for Extra-illustration (or "Grangerizing") catalog cards in the Harvard Theatre Collection
+Proof-of-concept handwriting transcription (HTR) for Extra-illustration catalog cards in the [Harvard Theatre Collection](https://library.harvard.edu/collections/harvard-theatre-collection)
 
 ![Sample Card Image](https://libapps.s3.amazonaws.com/accounts/56717/images/Ex_Ill_Card.JPG)
 
