@@ -1,7 +1,7 @@
 # Ex_Ill HTR
 Proof-of-concept handwriting transcription (HTR) for Extra-illustration catalog cards in the [Harvard Theatre Collection](https://library.harvard.edu/collections/harvard-theatre-collection)
 
-![Sample Card Image](https://files.slack.com/files-pri/T013STLEH1P-F01AC0ZDY21/j_page_0665_6.png)
+![Sample Card Image](https://www.dropbox.com/s/uhnrvemrw1zchze/J_Page_0665_6.png?dl=0)
 
 #### More Info
 Check out the Extra-Illustrated card catalog [preview page](https://guides.library.harvard.edu/c.php?g=952283&p=6870117&preview=f9ab7760c58a9bd38a72eb2dc5ddf111) for more info on the target collection
